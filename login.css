@@ -20,6 +20,13 @@ p {
     font-weight: bold;
     font-size: 14px;
 }
+
+canvas {
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
 body {
     /* no margins = no ugly white space */
     margin: 0;
@@ -31,7 +38,6 @@ body {
     background: #fff;
     /* Use wallpaper.jpg in the root directory */
     /* Perhaps eventually move resources to folders...it is small enough for now though */
-    background-image: url(wallpaper.png);
     /* Lets center it */
     background-position: 50%;
     /* And full screen */
