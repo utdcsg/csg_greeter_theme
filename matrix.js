@@ -1,11 +1,11 @@
 var c = document.getElementById("matrix-rain");
 var ctx = c.getContext("2d");
 
-var rainChars = "ムタ二コク1234567890シモラキリエスハヌトユABCDEF";
+var rainChars = "1234567890ABCDEF";
 //converting the string into an array of single characters
 rainChars= rainChars.split("");
 
-var font_size = 10;
+var font_size = 20;
 var columns=0;
 var drops=[];
 
@@ -31,7 +31,7 @@ function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, c.width, c.height);
 
-    ctx.fillStyle = "#007500"; //green text
+    ctx.fillStyle = "#00ff00"; //green text
     ctx.font = font_size + "px monospace";
     //looping over drops
     for(var i = 0; i < drops.length; i++)
@@ -53,5 +53,5 @@ function draw() {
 
 resize();
 draw();
-setInterval(draw, 33);
+setInterval(draw, 75);
 window.addEventListener("resize",resize);
